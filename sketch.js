@@ -1,16 +1,14 @@
-let s1 = ['red', 'red', 'red', 'red'];
-let s2 = ['green', 'green', 'green', 'green'];
-let s3 = ['darkorange', 'darkorange', 'darkorange', 'darkorange'];
-let s4 = ['blue', 'blue', 'blue', 'blue'];
-let s5 = ['white', 'white', 'white', 'white'];
-let s6 = ['yellow', 'yellow', 'yellow', 'yellow'];
-let sList = [s1, s2, s3, s4, s5, s6];
-let normCol = ['red', 'green', 'darkorange', 'blue', 'white', 'yellow'];
-
+var s1 = ['red', 'red', 'red', 'red'];
+var s2 = ['green', 'green', 'green', 'green'];
+var s3 = ['darkorange', 'darkorange', 'darkorange', 'darkorange'];
+var s4 = ['blue', 'blue', 'blue', 'blue'];
+var s5 = ['white', 'white', 'white', 'white'];
+var s6 = ['yellow', 'yellow', 'yellow', 'yellow'];
+var sList = [s1, s2, s3, s4, s5, s6];
+var normCol = ['red', 'green', 'darkorange', 'blue', 'white', 'yellow'];
 function setup() {
   createCanvas(600, 600, WEBGL);
 }
-
 function draw() {
   background(0)
   orbitControl(5);
@@ -146,14 +144,14 @@ function keyPressed() {
 }
 
 function moveBottomRight() {
-  let p0s0 = sList[0][0];
-  let p1s0 = sList[0][1];
-  let p0s1 = sList[1][0];
-  let p1s1 = sList[1][1];
-  let p0s2 = sList[2][0];
-  let p1s2 = sList[2][1];
-  let p0s3 = sList[3][0];
-  let p1s3 = sList[3][1];
+  var p0s0 = sList[0][0];
+  var p1s0 = sList[0][1];
+  var p0s1 = sList[1][0];
+  var p1s1 = sList[1][1];
+  var p0s2 = sList[2][0];
+  var p1s2 = sList[2][1];
+  var p0s3 = sList[3][0];
+  var p1s3 = sList[3][1];
   
   let p0s5 = sList[5][0];
   let p1s5 = sList[5][1];
