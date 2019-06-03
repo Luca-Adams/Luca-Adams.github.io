@@ -127,7 +127,7 @@ isTouchingMario() {
   } 
 }
 function setup() {
-  createCanvas(800, 400);
+  createCanvas(1400, 700);
   mario = new Character(200, 20, 40, 40)
   if (mario.isDead == false) {
   backgroundImage = loadImage("./Super_Mario.png")
