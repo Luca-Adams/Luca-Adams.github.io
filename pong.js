@@ -10,22 +10,24 @@ let p1 = {
 }
 
 let p2 = {
-  xPos: 575,
+  xPos: 1375,
   yPos: 300,
   xWidth: 15,
   yLength: 100
 }
 
 let ball = {
-  xPos: 300,
-  yPos: 300,
-  xSpeed: 5,
+  xPos: 700,
+  yPos: 350,
+  xSpeed: 10,
   ySpeed: 0,
   radius: 20
 }
 function setup() {
-  createCanvas(600, 600);
-  ball.ySpeed = random(-5, 5)
+  createCanvas(1400, 700);
+  ball.ySpeed = random(-10, 10)
+    p1.yPos = height/2
+    p2.yPos = height/2
 }
 
 function draw() {
@@ -38,26 +40,26 @@ function draw() {
   }
   stroke(255)
   strokeWeight(10)
-  line(300, 0, 300, 600)
+  line(700, 0, 700, 700)
   noStroke()
   strokeWeight(0)
   if (count >= 1) {
     textAlign(CENTER)
-    textSize(30)
+    textSize(60)
     strokeWeight(5)
-    text("PING", 150, 50)
+    text("PING", 350, 150)
   } if (count >= 2) {
-    text("PING", 150, 50)
-    text("PONG", 450, 50)
+    text("PING", 350, 150)
+    text("PONG", 1050, 150)
   } if (count >= 3) {
-    text("PING", 150, 50)
-    text("PONG", 450, 50)
-    text("LUCA'S", 150, 550)
+    text("PING", 350, 150)
+    text("PONG", 1050, 150)
+    text("LUCA'S", 350, 550)
   } if (count >= 4) {
-    text("PING", 150, 50)
-    text("PONG", 450, 50)
-    text("LUCA'S", 150, 550)
-    text("NEVER WRONG", 450, 550)
+    text("PING", 350, 150)
+    text("PONG", 1050, 150)
+    text("LUCA'S", 350, 550)
+    text("NEVER WRONG", 1050, 550)
   }
 
   strokeWeight(1)
@@ -85,18 +87,18 @@ function draw() {
     
 if (ball.xPos < 0) {
   a ++
-  ball.xPos = 500
-  ball.yPos = 300
-  ball.xSpeed = -5
-  ball.ySpeed = random(-5, 5)
+  ball.xPos = 1000
+  ball.yPos = 350
+  ball.xSpeed = -10
+  ball.ySpeed = random(-10, 10)
 
 }
   if (ball.xPos > width) {
   s ++
-  ball.xPos = 100
-  ball.yPos = 300
-  ball.xSpeed = 5
-  ball.ySpeed = random(-5, 5)
+  ball.xPos = 400
+  ball.yPos = 350
+  ball.xSpeed = 10
+  ball.ySpeed = random(-10, 10)
 
 
 }
@@ -106,7 +108,7 @@ if (ball.xPos < 0) {
       fill(255)
   text(s, 150, 300)
     fill(255)
-  text(a, 450, 300)
+  text(a, 1250, 300)
   textSize(30)
 
 
@@ -114,8 +116,11 @@ if (ball.xPos < 0) {
 }
 
 function collide() {
-  if (ball.xPos == 40 && ball.yPos >= p1.yPos - 50 && ball.yPos <= p1.yPos + 50 || ball.xPos == 560 && ball.yPos >= p2.yPos - 50 && ball.yPos <= p2.yPos + 50) {
+  if (ball.xPos == 40 && ball.yPos >= p1.yPos - 50 && ball.yPos <= p1.yPos + 50 || ball.xPos == width - 40 && ball.yPos >= p2.yPos - 50 && ball.yPos <= p2.yPos + 50) {
     ball.xSpeed *=-1
+
+
+
     count++
       
   }

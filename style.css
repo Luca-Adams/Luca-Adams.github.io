@@ -45,7 +45,7 @@ html, body {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: firebrick;
+  background-color: goldenrod;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -68,5 +68,5 @@ html, body {
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: firebrick;}
+.dropdown:hover .dropbtn {background-color: darkgoldenrod;}
 .dropdown:hover .dropbtn {color: white;}
